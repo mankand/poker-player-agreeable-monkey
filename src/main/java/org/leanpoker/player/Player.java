@@ -38,10 +38,12 @@ public class Player {
 		}
 
 		JsonArray communityCards = jsonRequest.getAsJsonArray("community_cards");
-
+		
 		for (JsonElement jsonElement : communityCards) {
 			String rank = jsonElement.getAsJsonObject().get("rank").getAsString();
 			String suit = jsonElement.getAsJsonObject().get("suit").getAsString();
+			
+
 
 			if (rank.equals(c1.get("rank"))) {
 				if (rank.equals(c2.get("rank"))) {
@@ -52,6 +54,7 @@ public class Player {
 			if (rank.equals(c2.get("rank"))) {
 				return currentBuyIn;
 			}
+			
 		}
 
 		if (!c1.get("rank").equals(c2.get("rank")) && !c1.get("suit").equals(c2.get("suit"))) {
@@ -70,7 +73,7 @@ public class Player {
 
 		int randomNum = 300 + (int) (Math.random() * ((1000 - 300) + 1));
 
-		return randomNum;
+		return currentBuyIn;
 	}
 
 	public static void showdown(JsonElement game) {
