@@ -71,9 +71,9 @@ public class Player {
 		 * players.getJsonObject(2); System.out.println(us);
 		 */
 
-		int randomNum = 300 + (int) (Math.random() * ((1000 - 300) + 1));
-
-		return currentBuyIn;
+		int randomNum = 500 + (int) (Math.random() * ((1000 - 500) + 1));
+		
+		return randomNum;
 	}
 
 	public static void showdown(JsonElement game) {
