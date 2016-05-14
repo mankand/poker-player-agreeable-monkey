@@ -26,6 +26,7 @@ public class Player {
 		JsonArray players = jsonRequest.getAsJsonArray("players");
 		JsonElement monkey = players.get(2);
 		JsonArray cards = ((JsonObject) monkey).getAsJsonArray("hole_cards");
+		int money = ((JsonObject) monkey).get("stack").getAsInt();
 		
 		int currentBuyIn = jsonRequest.get("current_buy_in").getAsInt();
 
@@ -34,7 +35,7 @@ public class Player {
 
 		if (c1.get("rank").equals(c2.get("rank"))) {
 			System.out.println("Hurray weve got a pair");
-			return 1000;
+			return money;
 		}
 
 		JsonArray communityCards = jsonRequest.getAsJsonArray("community_cards");
@@ -47,7 +48,7 @@ public class Player {
 
 			if (rank.equals(c1.get("rank"))) {
 				if (rank.equals(c2.get("rank"))) {
-					return 1000;
+					return money;
 				}
 				return currentBuyIn;
 			}
