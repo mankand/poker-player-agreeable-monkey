@@ -8,9 +8,10 @@ public class Player {
     static final String VERSION = "Default Java folding player";
     public static int betRequest(JsonElement request) {
 
-    	JsonObject jsonRequest = request.getAsJsonObject();
+      JsonObject jsonRequest = request.getAsJsonObject();
     	JsonArray players = jsonRequest.getAsJsonArray("players");
-    	System.out.println(players);
+    	JsonElement monkey = players.get(2);
+    	System.out.println(monkey);
 
     /*
       JsonObject jsonRequest = (JsonObject) request;
