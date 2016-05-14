@@ -6,13 +6,21 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
+<<<<<<< HEAD
 			<name>org.eclipse.jdt.core.javabuilder</name>
+=======
+			<name>org.eclipse.buildship.core.gradleprojectbuilder</name>
+>>>>>>> 61ab2e21379550c34bb03246c3f8ee53d4df56a1
 			<arguments>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
+<<<<<<< HEAD
 		<nature>org.springsource.ide.eclipse.gradle.core.nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+=======
+		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
+>>>>>>> 61ab2e21379550c34bb03246c3f8ee53d4df56a1
 	</natures>
 </projectDescription>
