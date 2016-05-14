@@ -1,9 +1,7 @@
 package org.leanpoker.player;
-
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 public class Player {
     static final String VERSION = "Yolo";
     static int i = 0;
@@ -16,9 +14,14 @@ public class Player {
     	JsonObject jsonRequest = request.getAsJsonObject();
     	JsonArray players = jsonRequest.getAsJsonArray("players");
     	JsonElement monkey = players.get(2);
-    	JsonElement cards = ((JsonObject)monkey).getAsJsonArray("hole_cards");
+    	JsonArray cards = ((JsonObject)monkey).getAsJsonArray("hole_cards");
+
+    	JsonObject c1 = (JsonObject)cards.get(0);
+    	JsonObject c2 = (JsonObject)cards.get(1);
+
     	System.out.println(i);
     	System.out.println(cards);
+    	System.out.println(c1.get("rank"));
     /*
       JsonObject jsonRequest = (JsonObject) request;
       JsonArray players = jsonRequest.getJsonArray("players");
@@ -28,4 +31,4 @@ public class Player {
     }
     public static void showdown(JsonElement game) {
     }
-}s
+}
