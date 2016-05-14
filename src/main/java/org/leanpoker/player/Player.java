@@ -11,16 +11,16 @@ public class Player {
     public static int betRequest(JsonElement request) {
 
     	JsonObject jsonRequest = request.getAsJsonObject();
-    	JsonArray orbits = jsonRequest.getAsJsonArray("orbits");
+    	/*JsonArray orbits = jsonRequest.getAsJsonArray("orbits");
 
-    	System.out.println(orbits);
+    	System.out.println(orbits);*/
 
 
     	JsonArray players = jsonRequest.getAsJsonArray("players");
     	JsonElement monkey = players.get(2);
     	JsonArray cards = ((JsonObject)monkey).getAsJsonArray("hole_cards");
 
-    	JsonObject c1 = (JsonObject)cards.get(0);
+    	/*JsonObject c1 = (JsonObject)cards.get(0);
     	JsonObject c2 = (JsonObject)cards.get(1);
 
     	/*
