@@ -11,7 +11,9 @@ public class Player {
       JsonObject jsonRequest = request.getAsJsonObject();
     	JsonArray players = jsonRequest.getAsJsonArray("players");
     	JsonElement monkey = players.get(2);
-    	System.out.println(monkey);
+    	JsonElement cards = ((JsonObject)monkey).getAsJsonArray("hole_cards");
+
+    	System.out.println(cards);
 
     /*
       JsonObject jsonRequest = (JsonObject) request;
