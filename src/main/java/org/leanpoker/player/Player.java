@@ -12,9 +12,12 @@ public class Player {
 
 
 		JsonObject jsonRequest = request.getAsJsonObject();
+		
+		//Round or Subgame
 		int orbits = jsonRequest.get("orbits").getAsInt();
 
-		System.out.println("Orbits"+orbits);
+		
+		System.out.println("Orbits "+orbits);
 
        	
     	/*JsonArray orbits = jsonRequest.getAsJsonArray("orbits");
@@ -30,9 +33,11 @@ public class Player {
 		JsonObject c2 = (JsonObject) cards.get(1);
 
 
-		/*
-		 * if(c1.get("rank").equals(c2.get("rank"))){ return 1000; }
-		 */
+		 if(c1.get("rank").equals(c2.get("rank"))){
+			 System.out.println("Hurray weve got a pair");
+			 return 1000; 
+			 }
+		 
 
     	/*JsonObject c1 = (JsonObject)cards.get(0);
     	JsonObject c2 = (JsonObject)cards.get(1);
