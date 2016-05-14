@@ -37,6 +37,9 @@ public class Player {
 			 System.out.println("Hurray weve got a pair");
 			 return 1000; 
 			 }
+		 if(!c1.get("rank").equals(c2.get("rank")) && !c1.get("suit").equals(c2.get("suit"))){
+			 return 100;
+		 }
 		 
 
     	/*JsonObject c1 = (JsonObject)cards.get(0);
