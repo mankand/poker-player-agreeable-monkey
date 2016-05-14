@@ -9,8 +9,9 @@ public class Player {
     public static int betRequest(JsonElement request) {
 
     	JsonObject jsonRequest = request.getAsJsonObject();
-    	JsonArray players = jsonRequest.getAsJsonArray("player");
+    	JsonArray players = jsonRequest.getAsJsonArray("players");
     	System.out.println(players);
+
     /*
       JsonObject jsonRequest = (JsonObject) request;
       JsonArray players = jsonRequest.getJsonArray("players");
