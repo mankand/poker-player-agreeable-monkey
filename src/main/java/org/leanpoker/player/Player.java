@@ -55,7 +55,7 @@ public class Player {
 		}
 
 		if (!c1.get("rank").equals(c2.get("rank")) && !c1.get("suit").equals(c2.get("suit"))) {
-			return 100;
+			return currentBuyIn > 100 ? currentBuyIn :0;
 		}
 		/*
 		 * JsonObject c1 = (JsonObject)cards.get(0); JsonObject c2 =
