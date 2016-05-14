@@ -7,13 +7,21 @@ import com.google.gson.JsonObject;
 
 public class Player {
 
-    static final String VERSION = "Default Java folding player";
-
+    static final String VERSION = "Yolo";
+    static int i = 0;
     public static int betRequest(JsonElement request) {
+    	if(i < 1){
+    		i++;
+    		return 0;
+    	}
     	
     	JsonObject jsonRequest = request.getAsJsonObject();
-    	JsonArray players = jsonRequest.getAsJsonArray("player");
-    	System.out.println(players);
+    	JsonArray players = jsonRequest.getAsJsonArray("players");
+    	JsonElement monkey = players.get(2);
+    	JsonElement cards = ((JsonObject)monkey).getAsJsonArray("hole_cards");
+
+    	System.out.println(i);
+    	System.out.println(cards);
     /*
       JsonObject jsonRequest = (JsonObject) request;
       JsonArray players = jsonRequest.getJsonArray("players");
