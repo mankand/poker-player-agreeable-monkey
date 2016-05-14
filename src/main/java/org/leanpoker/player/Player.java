@@ -12,9 +12,9 @@ public class Player {
 
 
 		JsonObject jsonRequest = request.getAsJsonObject();
-		int orbits = jsonRequest.get("orbits").getAsInt();
+		//int orbits = jsonRequest.get("orbits").getAsInt();
 
-		System.out.println(orbits);
+		//System.out.println(orbits);
 
        	
     	/*JsonArray orbits = jsonRequest.getAsJsonArray("orbits");
