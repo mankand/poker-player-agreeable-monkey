@@ -46,10 +46,7 @@ public class Player {
 		 * players.getJsonObject(2); System.out.println(us);
 		 */
 
-		int randomNum;
-		int minimum = 500;
-		int maximum = 1000;
-		randomNum = minimum + (int) (Math.random() * maximum);
+		int randomNum = 500 + (int)(Math.random() * ((1000 - 500) + 1));
 
 		return randomNum;
 	}
